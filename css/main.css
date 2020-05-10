@@ -1,0 +1,42 @@
+.dice-blue {
+   color: #337af8;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.no-outline {
+  outline: none;
+}
+
+button:focus,
+button:hover,
+button:active {
+  outline: none;
+}
+
+#randomStudent li {
+  font-size: 125%;
+}
+
+.w-40px {
+  width: 40px !important;
+}
+
+nav.navbar {
+  margin-bottom: 10rem !important;
+}
+
+nav.navbar-blue {
+  background-color: #337af8 !important;
+  color: white;
+}
+
+.red {
+  color: orangered;
+}
+
+.bg-red {
+  background-color: orangered;
+}
