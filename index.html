@@ -35,56 +35,103 @@
   <!-- FontAwesome icon include -->
   <script src="https://kit.fontawesome.com/00418a4922.js" crossorigin="anonymous"></script>
 
+  <!-- jQuery UI css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+
   <!-- Main local styles -->
   <link rel="stylesheet" href="css/main.css">
 
 </head>
 
-<body>
-
+<body class="bg-light">
   <!-- site navbar — included at runtime -->
   <div id="site-navbar"></div>
 
+  <div class="container-fluid bg-white py-5 px-2 mt-5">
+    <div class="container">
+      <div class="row pt-5">
+        <div class="col-md-4">
 
-  <div class="container padding my-5">
+          <!-- Roller button -->
+          <p id="roller" class="short-round center-block float-right mr-3 pointer mt-n2" style="font-size: 20px; height: 45px; width: 45px; padding: 11px; border-radius: 8px; background: #007bff; color: white;">
+            <i class="mt-n1 fad fa-fw fa-user-plus ml-1" aria-hidden="true"></i></p>
+          <h4>Participation</h4>
+          <hr>
 
-    <div class="row d-flex justify-content-center" id="randomizer">
+          <ul class="list-group mb-4" id="randomStudent">
 
-      <!-- Dice roller ------------------------------------------------>
-      <div class="d-flex p-5">
+            <!-- div#sample-students -->
+            <div id="sample-students">
+              <p class="lead text-muted text-center pt-3">Example ...</p>
+              <li class="list-group-item text-left text-center p-3 bg-aliceblue p-4"> <i class="mr-4 fad fa-fw fa-megaphone" aria-hidden="true"></i>Student 3</li>
+              <li class="list-group-item text-left text-center p-3 text-muted"> <i class="mr-4 fad fa-fw fa-user text-muted" aria-hidden="true"></i>Student 10</li>
+              <li class="list-group-item text-left text-center p-3 text-muted"> <i class="mr-4 fad fa-fw fa-user text-muted" aria-hidden="true"></i>Student 5</li>
+            </div>
 
-        <div class="pointer p-4" id="roller">
-          <button class="btn btn-lg btn-primary"><i class="fas fa-fw fa-bullhorn mr-3"></i> Shibuya!</button>
+          </ul>
+
         </div>
-        <!-- .card -->
+        <!-- .col-md-4 -->
+
+        <div class="col-md-8 pl-3" id="student-list">
+          <h4>Student Pool</h4>
+          <hr>
+        </div>
+        <!-- .col-md-8 -->
 
       </div>
-
-
-      <!-- Student student ------------------------------------------>
-      <div class="col-12 col-sm-6 p-5">
-
-        <ul class="list-group" id="randomStudent"></ul>
-
-      </div>
-
-
-
+      <!-- .row -->
     </div>
-    <!-- .row -->
-
+    <!-- .container -->
   </div>
-  <!-- .container -->
+  <!-- .container-fluid -->
 
   <!-- Site footer -->
   <div id="site-footer"></div>
 
+
+  <div class="modal fade" id="modal-license" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">MIT License Open Source Software</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <p><strong><i class="fa fa-fw fa-copyright"></i> 2020 Randal Sean Harrison, Ph.D.</strong></p>
+
+          <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to
+            use,
+            copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+          <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software:<br></p>
+
+          <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+            COPYRIGHT
+            HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Confirmation modal -->
+  <div id="dialog-confirm" title="Reset Roll Call">
+    <p>All tracking will be reset for this roll call. Are you sure?</p>
+  </div>
 
   <!-- jquery JS minified -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
   <!-- popper minified -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+  <!-- jQuery UI Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
   <!-- bootstrap JS minified -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

@@ -1,5 +1,26 @@
+/* Utility Classes */
 .dice-blue {
    color: #337af8;
+}
+
+.red {
+  color: orangered;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-red {
+  background-color: RGBA(255, 228, 225, .5);
+}
+
+.btn-aliceblue {
+  background-color: aliceblue;
+}
+
+.half-opacity {
+  opacity: .5;
 }
 
 .pointer {
@@ -16,8 +37,28 @@ button:active {
   outline: none;
 }
 
+.short-round {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #FFFFFF;
+}
+
+/*
 #randomStudent li {
+  font-size: 10%;
+} */
+
+.list-group-item.bg-aliceblue {
+  background-color: aliceblue !important;
   font-size: 125%;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+
+.list-group-item,
+.list-group-item.bg-aliceblue {
+  text-align: left !important;
 }
 
 .w-40px {
@@ -28,15 +69,15 @@ nav.navbar {
   margin-bottom: 10rem !important;
 }
 
+.navbar-brand {
+  font-size: inherit;
+}
+
 nav.navbar-blue {
   background-color: #337af8 !important;
   color: white;
 }
 
-.red {
-  color: orangered;
-}
-
-.bg-red {
-  background-color: orangered;
+#site-navbar {
+  margin-bottom: 6rem;
 }
