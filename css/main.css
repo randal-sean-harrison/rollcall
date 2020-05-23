@@ -51,7 +51,6 @@ button:active {
 
 .list-group-item.bg-aliceblue {
   background-color: aliceblue !important;
-  font-size: 125%;
   border-top-left-radius: .25rem;
   border-top-right-radius: .25rem;
 }

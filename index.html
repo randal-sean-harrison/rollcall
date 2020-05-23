@@ -50,11 +50,9 @@
   <div class="container-fluid bg-white py-5 px-2 mt-5">
     <div class="container">
       <div class="row pt-5">
-        <div class="col-md-4">
+        <div class="col-md-4 p-4">
 
           <!-- Roller button -->
-          <p id="roller" class="short-round center-block float-right mr-3 pointer mt-n2" style="font-size: 20px; height: 45px; width: 45px; padding: 11px; border-radius: 8px; background: #007bff; color: white;">
-            <i class="mt-n1 fad fa-fw fa-user-plus ml-1" aria-hidden="true"></i></p>
           <h4>Participation</h4>
           <hr>
 
@@ -62,7 +60,7 @@
 
             <!-- div#sample-students -->
             <div id="sample-students">
-              <p class="lead text-muted text-center pt-3">Example ...</p>
+              <p class="lead text-muted text-center pt-3"><em>Example ...</em></p>
               <li class="list-group-item text-left text-center p-3 bg-aliceblue p-4"> <i class="mr-4 fad fa-fw fa-megaphone" aria-hidden="true"></i>Student 3</li>
               <li class="list-group-item text-left text-center p-3 text-muted"> <i class="mr-4 fad fa-fw fa-user text-muted" aria-hidden="true"></i>Student 10</li>
               <li class="list-group-item text-left text-center p-3 text-muted"> <i class="mr-4 fad fa-fw fa-user text-muted" aria-hidden="true"></i>Student 5</li>
@@ -73,9 +71,12 @@
         </div>
         <!-- .col-md-4 -->
 
-        <div class="col-md-8 pl-3" id="student-list">
-          <h4>Student Pool</h4>
+        <div class="col-md-8 p-4 border rounded">
+          <button id="roller" class="btn btn-primary float-right"><i class="fad fa-fw fa-user-plus mr-1"></i> Random</button>
+          <h4>Select Student</h4>
           <hr>
+          <div id="student-list">
+          </div>
         </div>
         <!-- .col-md-8 -->
 
