@@ -1,6 +1,6 @@
 /* Utility Classes */
 .dice-blue {
-   color: #337af8;
+  color: #337af8;
 }
 
 .red {
@@ -38,17 +38,16 @@ button:active {
 }
 
 .short-round {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
 }
 
 /*
 #randomStudent li {
   font-size: 10%;
 } */
-
 .list-group-item.bg-aliceblue {
   background-color: aliceblue !important;
   border-top-left-radius: .25rem;
@@ -79,4 +78,10 @@ nav.navbar-blue {
 
 #site-navbar {
   margin-bottom: 6rem;
+}
+
+/* Overlay for reset modal */
+.ui-widget-overlay {
+  background: #000;
+  opacity: .6;
 }
