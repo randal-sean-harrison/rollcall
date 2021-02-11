@@ -2,14 +2,12 @@ $(document).ready(function() {
 
 
   // load external files
-  $("#site-navbar").load("navbar.html");
+  // $("#site-navbar").load("navbar.html");
 
   // Write the site footer
-  $("#site-footer").load("site-footer.html");
+  // $("#site-footer").load("site-footer.html");
 
-  // Get course
-  // var currentCourse = prompt("Which course are you tracking?");
-  // var currentCourse = "star-wars";
+  // Get course json list
   var currentCourse = "students";
 
   // Declare and clear the array on load
@@ -32,7 +30,6 @@ $(document).ready(function() {
 
   });
 
-
   function aliceblue() {
     // Remove from all li elements
     $("#randomStudent li").removeClass("btn-aliceblue");
@@ -41,11 +38,6 @@ $(document).ready(function() {
     $("#randomStudent li:first-of-type").removeClass("text-muted");
   }
 
-
-  // Toggle show and hide the office movie
-  // $("#instructions").on("click", function(){
-  //   $("#hidey").slideToggle();
-  // });
 
   $(document).on("click", "#student-list button", function() {
 

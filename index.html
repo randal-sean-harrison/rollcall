@@ -45,7 +45,29 @@
 
 <body class="bg-light">
   <!-- site navbar — included at runtime -->
-  <div id="site-navbar"></div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm bg-primary fixed-top text-light p-4 mb-5 z-1">
+    <div class="container-fluid">
+      <!-- Logo as link -->
+      <h1><i class="fad fa-fw fa-lg fa-bus"></i> Roll Call</h1>
+
+
+      <!-- Mobile toggle button -->
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#mobile-nav">
+        <i class="far fa-lg fa-bars color-aa-blue"></i>
+        <!-- Alternately, we can use the pancake menu -->
+        <!-- <span class="navbar-toggler-icon"></span> -->
+      </button>
+      <div class="collapse navbar-collapse" id="mobile-nav">
+        <ul class="navbar-nav ml-auto">
+          <!-- <li class="nav-item"><button class="btn btn-primary" data-target="get-started.html">Get Started</a></li> -->
+          <li class="nav-item mt-0 mr-2" id="reset"><button class="btn bg-light text-primary"><i class="fad fa-fw fa-sync-alt mr-1"></i> reset</button></li>
+          <li class="nav-item mt-0 mr-2 d-none"><button class="btn bg-light text-primary" role="button" id="save-button"><i class="fad fa-fw fa-save mr-2"></i>Save</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
 
   <div class="container-fluid bg-white py-5 px-2 mt-5">
     <div class="container">
@@ -88,8 +110,40 @@
   <!-- .container-fluid -->
 
   <!-- Site footer -->
-  <div id="site-footer"></div>
+  <footer class="bg-light mt-auto text-muted p-3">
+    <div class="container-fluid">
 
+      <div class="row d-flex flex-row justify-content-center">
+
+        <div class="col">
+          <h4><i class="fad fa-fw fa-bus text-secondary"></i> Roll Call</h4>
+          <p>&copy; 2020 Randal Sean Harrison, Ph.D.</p>
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item px-1"><a data-toggle="tooltip" data-placement="top" title="Email me" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=rharriso@nd.edu" target="_blank"><i
+                  class="fad fa-lg  fa-paper-plane"></i></a></li>
+            <li class="list-inline-item px-1"><a data-toggle="tooltip" data-placement="top" title="Home page" href="http://www.randalseanharrison.com" target="_blank"><i class="fad fa-lg fa-home"></i></a></li>
+            <li class="list-inline-item px-1"><a data-toggle="tooltip" data-placement="top" title="Github" href="https://github.com/randal-sean-harrison" target="_blank"><i class="fab fa-lg fa-github"></i></a></li>
+            <li class="list-inline-item px-1"><a data-toggle="tooltip" data-placement="top" title="LinkedIn" href="https://www.linkedin.com/in/randalseanharrison" target="_blank"><i class="fab fa-lg fa-linkedin"></i></a></li>
+            <li class="list-inline-item px-1"><a data-toggle="tooltip" data-placement="top" title="Twitter" href="https://twitter.com/randal_sean" target="_blank"><i class="fa fa-lg fa-twitter-square"></i></a></li>
+          </ul>
+
+        </div>
+
+
+        <div class="col text-right">
+
+          <p><a href class="d-inline px-2" role='button' data-toggle='modal' data-target='#modal-license'><i class="fad fa-fw fa-scroll"></i> License</a>
+            <a class="d-inline px-2" role='button' href="https://github.com/randal-sean-harrison/rollcall" target="_blank"><i class="fad fa-fw fa-code "></i> Repo</a>
+          </p>
+
+        </div>
+
+      </div>
+      <!-- .row -->
+
+    </div>
+    <!-- .container -->
+  </footer>
 
   <div class="modal fade" id="modal-license" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -139,6 +193,41 @@
 
   <!-- Main local scripts -->
   <script src="js/main.js"></script>
+
+  <script>
+
+    // Reset dialog -------------------------------------------------------------
+    $("#reset").on("click", function() {
+
+      // Open the dialog box onClick
+      $("#dialog-confirm").dialog("open");
+
+      // remove the close button on the modal
+      $(".ui-dialog-titlebar-close").remove();
+      $(".ui-icon-alert").remove();
+      $(".ui-dialog-buttonset button:first-of-type").addClass("btn btn-default");
+      $(".ui-dialog-buttonset button:last-of-type").addClass("btn btn-primary");
+    });
+
+    $("#dialog-confirm").dialog({
+          autoOpen: false,
+          resizable: false,
+          height: "auto",
+          width: 400,
+          modal: true,
+          buttons: {
+            "Cancel": function() {
+              $(this).dialog("close");
+            },
+            "Reset Form": function() {
+              // Turns the green checked circles to open empty circles
+              window.location.reload();
+            }
+          }
+        });
+
+
+  </script>
 
 </body>
 
