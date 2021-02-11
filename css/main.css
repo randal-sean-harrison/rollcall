@@ -16,11 +16,16 @@
 }
 
 .btn-aliceblue {
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
+  background-color: #E9F1FC;
+}
+
+.btn-light {
+  background: #efeff3 !important;
 }
 
 .half-opacity {
-  opacity: .5;
+  opacity: .65;
 }
 
 .pointer {
