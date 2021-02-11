@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -32,7 +33,13 @@
       background: ghostwhite;
     }
 
+    img {
+      -webkit-box-shadow: 0px 1px 20px 6px rgba(0,0,0,0.2);
+      box-shadow: 0px 1px 20px 6px rgba(0,0,0,0.2);
+    }
+
   </style>
+
 </head>
 
 <body>
@@ -48,10 +55,11 @@
 
     </li>
     <li class="push-down-1">Open the <code>students.json</code> file in the <code>/json</code> folder and replace the sample student names (currently Star Wars characters) with the names of your own students.</li>
-    <li>Open the index file in any browser.</li>
+    <li>Find the the index.html file and open it in any Web browser.</li>
     </ol>
 
     <h3 class="push-down-3">Example students.json file</h3>
+
 <pre class='prettyprint linenums lang-js'>
 [
   "John Adams",
@@ -62,9 +70,6 @@
 </pre>
 
 <p class="alert alert-warning"><strong>NOTE</strong><br>Make sure to leave the trailing comma off the last entry in the students.json file. In the example above, separate all entries with trailing commas EXCEPT "Ryu Tanaka".</p>
-
-
-
 
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
