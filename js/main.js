@@ -9,7 +9,8 @@ $(document).ready(function() {
 
   // Get course
   // var currentCourse = prompt("Which course are you tracking?");
-  var currentCourse = "star-wars";
+  // var currentCourse = "star-wars";
+  var currentCourse = "students";
 
   // Declare and clear the array on load
   var studentsArray = [];
