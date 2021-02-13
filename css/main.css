@@ -90,3 +90,12 @@ nav.navbar-blue {
   background: #000;
   opacity: .6;
 }
+
+/* Push down the buttons in the mobile nav */
+@media all and (max-width: 600px) {
+
+  #navigation-list {
+    padding: 2rem 0 0 1rem;
+
+  }
+}

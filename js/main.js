@@ -141,6 +141,28 @@ $(document).ready(function() {
     }
   });
 
+  // Upload new students
+  $("#upload").on("click", function() {
+
+    // Get the student names from the textarea
+    var studentNames = $("#student-names").val();
+
+    if (studentNames != "") {
+
+      // remove final comma if exists
+      studentNames = studentNames.replace(/,\s*$/, "");
+
+      // replace comma + space with just comma
+      studentNames = studentNames.replace(/[, ]+/g,",");
+
+
+      alert(studentNames);
+    }
+  });
+
+
+
+
   // Get the date for saving to a filename
   var d = new Date();
   var month = d.getMonth() + 1;
