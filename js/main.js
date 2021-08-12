@@ -25,7 +25,7 @@ $(document).ready(function() {
     studentsArray = studentsArray.sort();
 
     for (let i = 0; i < studentsArray.length; i++) {
-      $("#student-list").append("<button data-studentname='" + studentsArray[i] + "' class='btn btn-aliceblue mx-2 my-2 pl-0 student'><span class='badge badge-pill'><i class='fad fa-fw fa-user mr-1'></i></span>" + studentsArray[i] + "</button>");
+      $("#student-list").append("<button data-studentname='" + studentsArray[i] + "' class='btn btn-aliceblue mx-2 my-2 pl-0 student'><span class='badge badge-pill'><i class='fas fa-fw fa-user mr-1'></i></span>" + studentsArray[i] + "</button>");
     }
 
   });
@@ -61,7 +61,7 @@ $(document).ready(function() {
       // $("#randomStudent li:first-of-type").addClass("text-muted");
 
       // Prepend it to the array
-      $("#randomStudent").prepend("<li class='list-group-item text-left p-3 text-center btn-aliceblue'> <i class='mr-4 fad fa-fw fa-user'></i>" + $(this).text() + "</li>");
+      $("#randomStudent").prepend("<li class='list-group-item text-left p-3 text-center btn-aliceblue'> <i class='mr-4 fas fa-fw fa-user'></i>" + $(this).text() + "</li>");
 
       aliceblue();
 
@@ -99,7 +99,7 @@ $(document).ready(function() {
       $("#student-list button[data-studentname='" + rando + "']").removeClass("btn-aliceblue").addClass("btn-light").addClass("half-opacity");
 
       // Write the student's name
-      $("#randomStudent").prepend("<li class='list-group-item text-left p-3 text-center'> <i class='mr-4 fad fa-fw fa-user'></i>" + rando + "</li>");
+      $("#randomStudent").prepend("<li class='list-group-item text-left p-3 text-center'> <i class='mr-4 fas fa-fw fa-user'></i>" + rando + "</li>");
 
 
       // Pop the chosen student off the array
