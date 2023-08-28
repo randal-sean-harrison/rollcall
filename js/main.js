@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
 
   // load external files
@@ -8,13 +8,13 @@ $(document).ready(function() {
   // $("#site-footer").load("site-footer.html");
 
   // Get course json list
-  var currentCourse = "students";
+  var currentCourse = "real-students";
 
   // Declare and clear the array on load
   var studentsArray = [];
 
   // read in the array of names
-  $.getJSON("json/" + currentCourse + ".json", function(data) {
+  $.getJSON("json/" + currentCourse + ".json", function (data) {
 
     // Push the data into an array
     for (let i = 0; i < data.length; i++) {
@@ -39,7 +39,7 @@ $(document).ready(function() {
   }
 
 
-  $(document).on("click", "#student-list button", function() {
+  $(document).on("click", "#student-list button", function () {
 
     if ($("#sample-students").length) {
       $("#sample-students").remove();
@@ -81,7 +81,7 @@ $(document).ready(function() {
 
 
   // Choose a name at random on click
-  $(document).on("click", "#roller", function() {
+  $(document).on("click", "#roller", function () {
 
 
     if ($("#sample-students").length) {
@@ -112,7 +112,7 @@ $(document).ready(function() {
   });
 
   // Reset dialog -------------------------------------------------------------
-  $("#reset").on("click", function() {
+  $("#reset").on("click", function () {
 
     // Open the dialog box onClick
     $("#dialog-confirm").dialog("open");
@@ -131,10 +131,10 @@ $(document).ready(function() {
     width: 400,
     modal: true,
     buttons: {
-      "Cancel": function() {
+      "Cancel": function () {
         $(this).dialog("close");
       },
-      "Reset Form": function() {
+      "Reset Form": function () {
         // Turns the green checked circles to open empty circles
         window.location.reload();
       }
@@ -142,7 +142,7 @@ $(document).ready(function() {
   });
 
   // Upload new students
-  $("#upload").on("click", function() {
+  $("#upload").on("click", function () {
 
     // Get the student names from the textarea
     var studentNames = $("#student-names").val();
@@ -153,7 +153,7 @@ $(document).ready(function() {
       studentNames = studentNames.replace(/,\s*$/, "");
 
       // replace comma + space with just comma
-      studentNames = studentNames.replace(/[, ]+/g,",");
+      studentNames = studentNames.replace(/[, ]+/g, ",");
 
 
       alert(studentNames);
@@ -182,9 +182,9 @@ $(document).ready(function() {
   var fileToSave = fullDate + "-participation.txt";
 
   // Save button
-  $("#save-button").on("click", function() {
+  $("#save-button").on("click", function () {
 
-    var listy = $("#randomStudent li").map(function() {
+    var listy = $("#randomStudent li").map(function () {
       return $(this).text();
     }).get().join("\n");
 
