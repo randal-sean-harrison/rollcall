@@ -17,9 +17,12 @@ $(document).ready(function () {
   $.getJSON("json/" + currentCourse + ".json", function (data) {
 
     // Push the data into an array
-    for (let i = 0; i < data.length; i++) {
+    for (i = 0; i < data.length; i++) {
       studentsArray.push(data[i]);
     }
+
+    console.log(studentsArray);
+    console.log(i);
 
     // Sort the array
     studentsArray = studentsArray.sort();
