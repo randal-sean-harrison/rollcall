@@ -21,9 +21,6 @@ $(document).ready(function () {
       studentsArray.push(data[i]);
     }
 
-    console.log(studentsArray);
-    console.log(i);
-
     // Sort the array
     studentsArray = studentsArray.sort();
 
