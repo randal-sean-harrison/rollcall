@@ -8,7 +8,7 @@ $(document).ready(function () {
   // $("#site-footer").load("site-footer.html");
 
   // Get course json list
-  var currentCourse = "mod2";
+  var currentCourse = "students";
 
   // Declare and clear the array on load
   var studentsArray = [];
